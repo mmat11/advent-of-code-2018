@@ -1,14 +1,9 @@
-import tables
-import sequtils
-import strutils
+import sequtils, strutils, tables
 
-var
-    two: int = 0
-    three: int = 0
+var two, three: int = 0
 
 for l in lines("inputs/2"):
-    let occ = toCountTable(l.strip())
-    let values = toSeq(occ.values)
+    let values = toSeq(toCountTable(l).values)
 
     if 2 in values:
         inc two

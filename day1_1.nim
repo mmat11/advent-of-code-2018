@@ -2,7 +2,6 @@ import strutils
 
 var sum: int = 0
 
-let lines = readFile("inputs/1").strip().splitLines()
-for n in lines:
-    sum += parseInt(n)
+for n in lines("inputs/1"):
+    sum += parseInt(n.strip())
 echo sum

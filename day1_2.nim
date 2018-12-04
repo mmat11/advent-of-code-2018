@@ -1,12 +1,14 @@
-import strutils
+import sequtils, strutils
 
-var current: int = 0
-var partials: seq[int] = @[0]
+var
+    current: int = 0
+    partials: seq[int] = @[0]
 
-let lines = readFile("inputs/1").strip().splitLines()
+let lines = readFile("inputs/1").strip().splitLines().map(parseInt)
+
 while true:
     for n in lines:
-        current += parseInt(n)
+        current += n
         if current in partials:
             echo current
             quit(0)

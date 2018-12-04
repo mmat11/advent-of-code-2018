@@ -11,11 +11,9 @@ func charDiff(a, b: string): int =
         if a[i] != b[i]: inc c
     return c
 
-let words = readFile("inputs/2").strip().splitLines()
-
-for a, b in couples(words):
+for a, b in couples(readFile("inputs/2").splitLines()):
     if editDistance(a, b) == 1 and charDiff(a, b) == 1:
         for i in 0 ..< a.len:
             if a[i] == b[i]: stdout.write a[i]
+        stdout.write "\n"
         break
-stdout.write "\n"

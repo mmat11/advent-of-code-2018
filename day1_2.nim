@@ -1,5 +1,6 @@
 import sequtils, strutils
 
+
 var
     current: int = 0
     partials: seq[int] = @[0]

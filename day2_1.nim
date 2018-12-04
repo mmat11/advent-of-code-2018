@@ -1,5 +1,6 @@
 import sequtils, strutils, tables
 
+
 var two, three: int = 0
 
 for l in lines("inputs/2"):

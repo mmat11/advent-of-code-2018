@@ -1,5 +1,6 @@
 import strscans, strutils
 
+
 const max: int = 1000
 var 
     area: array[0..max, array[0..max, int]]

@@ -1,5 +1,6 @@
 import strutils
 
+
 iterator couples[A](xs: seq[A]): auto =
     for i in 0 ..< xs.len:
       for j in (i + 1) ..< xs.len:
